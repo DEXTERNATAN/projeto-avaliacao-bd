@@ -4,6 +4,9 @@ var cookieParser = require('cookie-parser');
 var routes = require('./routes/routes');
 var api = require('./api/api');
 
+require('./config/database')('mongodb://localhost/alurapic');
+
+
 function Server() {
     var app = express();
     var port = process.env.PORT || 9000;
